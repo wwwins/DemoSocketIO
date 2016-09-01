@@ -23,4 +23,9 @@ io.on('connection', function (socket) {
     console.log(data);
     socket.emit('msg', data );
   });
+  socket.on('needsAck', function (name, fn) {
+    console.log('needsAck ',name);
+    fn('ack12345');
+  }
+  );
 });

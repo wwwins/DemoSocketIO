@@ -1,13 +1,18 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
   var socket = io('http://localhost:8080');
-  console.log("start");
+  socket.on('connect', function () {
+    console.log("connected");
+    socket.emit('needsAck', 'test', function (data) {
+      console.log(data);
+    })
+  })
   socket.on('startgame', function (data) {
     console.log(data);
-    socket.emit('msg', "test123");
+    socket.emit('msg', "game123");
   });
   socket.on('msg', function (data) {
-    console.log(data);
+    console.log("echo:",data);
 
   })
 </script>

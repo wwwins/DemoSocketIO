@@ -29,7 +29,7 @@ class ViewController: UIViewController {
 
     textViewForReceive.text = "";
 
-    socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:8080")!, config: [.Log(true), .ForcePolling(true)])
+    socket = SocketIOClient(socketURL: NSURL(string: "http://localhost:8080")!, config: [.Log(false), .ForcePolling(true)])
     addHandlers()
     socket?.connect()
 
@@ -44,6 +44,10 @@ class ViewController: UIViewController {
     socket?.on("connect") {data, ack in
       print("### socket connected ###");
 
+      self.socket?.emitWithAck("needsAck", "test")(timeoutAfter:0) { data in
+        print("emitWithAck",data)
+      }
+
     }
 
     socket?.on("error") {data, ack in
@@ -53,19 +57,26 @@ class ViewController: UIViewController {
 
     socket?.on("startgame") {data, ack in
       print("### startgame ###")
-      self.showMessage(data);
+      self.showMessage(data)
 
     }
 
     socket?.on("msg") {data, ack in
-      self.showMessage(data);
+      self.showEchoMessage(data)
     }
+
 
   }
 
   func showMessage(data:[AnyObject]) {
     if let msg = data[0] as? String {
       textViewForReceive.text = textViewForReceive.text + msg + "\r"
+    }
+  }
+
+  func showEchoMessage(data:[AnyObject]) {
+    if let msg = data[0] as? String {
+      textViewForReceive.text = textViewForReceive.text + "echo:".stringByAppendingString(msg) + "\r"
     }
   }
 

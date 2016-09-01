@@ -18,14 +18,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-nP-fhs">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-nP-fhs">
                                 <rect key="frame" x="20" y="20" width="317" height="395"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMQ-K6-Dr9">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMQ-K6-Dr9">
                                 <rect key="frame" x="135" y="546" width="105" height="41"/>
                                 <color key="backgroundColor" red="0.43529411759999997" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -49,7 +49,7 @@
                                     <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYI-T8-XwZ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VRK-BQ-mR0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VRK-BQ-mR0">
                                 <rect key="frame" x="20" y="493" width="202" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -74,10 +74,10 @@
                                 <exclude reference="o6x-Ga-EYM"/>
                                 <exclude reference="Qs5-Qo-OXS"/>
                                 <exclude reference="hfU-l7-2YY"/>
-                                <exclude reference="pQg-vH-oyQ"/>
                                 <exclude reference="Svh-1L-xO4"/>
                                 <exclude reference="cxH-hj-FDY"/>
                                 <exclude reference="xhI-MG-S5I"/>
+                                <exclude reference="pQg-vH-oyQ"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -87,10 +87,10 @@
                                 <include reference="o6x-Ga-EYM"/>
                                 <include reference="Qs5-Qo-OXS"/>
                                 <include reference="hfU-l7-2YY"/>
-                                <include reference="pQg-vH-oyQ"/>
                                 <include reference="Svh-1L-xO4"/>
                                 <include reference="cxH-hj-FDY"/>
                                 <include reference="xhI-MG-S5I"/>
+                                <include reference="pQg-vH-oyQ"/>
                             </mask>
                         </variation>
                     </view>
