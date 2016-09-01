@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="socketIODemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="zQa-nP-fhs">
+                                <rect key="frame" x="20" y="20" width="317" height="395"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RMQ-K6-Dr9">
+                                <rect key="frame" x="135" y="546" width="105" height="41"/>
+                                <color key="backgroundColor" red="0.43529411759999997" green="0.57254901960000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="2vh-5g-7tL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="送出">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="2vh-5g-7tL"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="2vh-5g-7tL"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RYI-T8-XwZ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VRK-BQ-mR0">
+                                <rect key="frame" x="20" y="493" width="202" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zQa-nP-fhs" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="0qD-3m-431"/>
+                            <constraint firstItem="zQa-nP-fhs" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="JlN-wF-jYq"/>
+                            <constraint firstItem="VRK-BQ-mR0" firstAttribute="centerY" secondItem="RMQ-K6-Dr9" secondAttribute="centerY" id="Qs5-Qo-OXS"/>
+                            <constraint firstItem="RMQ-K6-Dr9" firstAttribute="leading" secondItem="VRK-BQ-mR0" secondAttribute="trailing" constant="8" id="Svh-1L-xO4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RMQ-K6-Dr9" secondAttribute="trailing" id="cxH-hj-FDY"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="VRK-BQ-mR0" secondAttribute="leading" id="hfU-l7-2YY"/>
+                            <constraint firstItem="zQa-nP-fhs" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="o6x-Ga-EYM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RMQ-K6-Dr9" secondAttribute="bottom" constant="20" id="pQg-vH-oyQ"/>
+                            <constraint firstItem="RMQ-K6-Dr9" firstAttribute="top" secondItem="zQa-nP-fhs" secondAttribute="bottom" constant="23" id="xhI-MG-S5I"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0qD-3m-431"/>
+                                <exclude reference="JlN-wF-jYq"/>
+                                <exclude reference="o6x-Ga-EYM"/>
+                                <exclude reference="Qs5-Qo-OXS"/>
+                                <exclude reference="hfU-l7-2YY"/>
+                                <exclude reference="pQg-vH-oyQ"/>
+                                <exclude reference="Svh-1L-xO4"/>
+                                <exclude reference="cxH-hj-FDY"/>
+                                <exclude reference="xhI-MG-S5I"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="0qD-3m-431"/>
+                                <include reference="JlN-wF-jYq"/>
+                                <include reference="o6x-Ga-EYM"/>
+                                <include reference="Qs5-Qo-OXS"/>
+                                <include reference="hfU-l7-2YY"/>
+                                <include reference="pQg-vH-oyQ"/>
+                                <include reference="Svh-1L-xO4"/>
+                                <include reference="cxH-hj-FDY"/>
+                                <include reference="xhI-MG-S5I"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textFieldForSend" destination="VRK-BQ-mR0" id="g6f-Jv-rAM"/>
+                        <outlet property="textViewForReceive" destination="zQa-nP-fhs" id="1Zg-Sg-92f"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447" y="346"/>
+        </scene>
+    </scenes>
+</document>

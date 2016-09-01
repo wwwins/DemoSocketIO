@@ -1,0 +1,13 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io('http://localhost:8080');
+  console.log("start");
+  socket.on('startgame', function (data) {
+    console.log(data);
+    socket.emit('msg', "test123");
+  });
+  socket.on('msg', function (data) {
+    console.log(data);
+
+  })
+</script>
